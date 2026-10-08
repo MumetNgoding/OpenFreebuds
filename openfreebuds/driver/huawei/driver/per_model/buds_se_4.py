@@ -14,11 +14,14 @@ class OfbDriverHuaweiSe4(OfbDriverHuaweiGeneric):
             OfbHuaweiActionDoubleTapHandler(w_in_call=True),
             OfbHuaweiActionTripleTapHandler(),
             OfbHuaweiActionLongTapSplitHandler(w_right=True, w_extra_options=True),
-            OfbHuaweiEqualizerPresetHandler(w_presets={
-                1: "default",
-                2: "hardbass",
-                3: "treble",
-                9: "voices",
-            }),
+            OfbHuaweiEqualizerPresetHandler(
+                w_presets={
+                    1: "default",
+                    2: "hardbass",
+                    3: "treble",
+                    9: "voices",
+                },
+                w_custom=True
+            ),
             OfbHuaweiLowLatencyPreferenceHandler(),
         ]
